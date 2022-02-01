@@ -2,10 +2,15 @@ var update = (data) => {
   console.log(data);
 };
 
-var physio = new Physio(update);
 var vis = new Vis();
+var physio = new Physio(update, vis);
+
 document.querySelector("#connect").onclick = () => {
   physio.connect();
+};
+
+document.querySelector("#disconnect").onclick = () => {
+  physio.disconnect();
 };
 
 window.addEventListener("beforeunload", function (e) {

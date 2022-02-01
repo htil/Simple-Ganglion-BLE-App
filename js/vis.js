@@ -3,7 +3,7 @@
  */
 
 var Vis = function () {
-  window.rawSignalGraph = new Rickshaw.Graph({
+  var rawSignalGraph = new Rickshaw.Graph({
     element: document.querySelector("#graph"),
     width: 600,
     height: 400,
@@ -18,9 +18,13 @@ var Vis = function () {
       undefined,
       {
         timeInterval: 1,
-        maxDataPoints: 256 * 2,
+        maxDataPoints: 256 * 1,
         timeBase: new Date().getTime() / 1000,
       }
     ),
   });
+
+  rawSignalGraph.render();
+
+  this.rawSignalGraph = rawSignalGraph;
 };
