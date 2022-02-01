@@ -23,6 +23,4 @@ var Vis = function () {
       }
     ),
   });
-
-  //window.rawSignalGraph.render();
 };
