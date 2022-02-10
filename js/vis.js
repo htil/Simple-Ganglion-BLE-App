@@ -18,7 +18,7 @@ var Vis = function () {
       undefined,
       {
         timeInterval: 1,
-        maxDataPoints: 256 * 1,
+        maxDataPoints: 256 * 2,
         timeBase: new Date().getTime() / 1000,
       }
     ),

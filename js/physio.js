@@ -32,6 +32,7 @@ var Physio = function (update, vis) {
     }
 
     this.channels[channel].push(sample);
+    //return 0;
     return this.channelFilters[channel].singleStep(sample); // return filtered data
   };
 
@@ -59,7 +60,9 @@ var Physio = function (update, vis) {
       let filteredData = 0;
       for (let sample in data) {
         filteredData = this.addData(data[sample], sample);
+        //console.log(data[sample], sample);
         temp[sample] = filteredData;
+        //temp[sample] = data[sample];
       }
       vis.rawSignalGraph.series.addData(temp);
       vis.rawSignalGraph.render();
